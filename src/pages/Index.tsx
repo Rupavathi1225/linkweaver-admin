@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { LayoutDashboard, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ const Index = () => {
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex justify-center">
           <Button 
             size="lg"
             onClick={() => navigate('/actions')}
@@ -25,15 +25,6 @@ const Index = () => {
           >
             <Sparkles className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
             View Actions
-          </Button>
-          <Button 
-            size="lg"
-            variant="outline"
-            onClick={() => navigate('/admin/actions')}
-            className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-          >
-            <LayoutDashboard className="w-5 h-5 mr-2" />
-            Admin Panel
           </Button>
         </div>
       </div>
